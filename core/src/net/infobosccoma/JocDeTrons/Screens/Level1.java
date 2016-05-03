@@ -11,6 +11,7 @@ import com.badlogic.gdx.physics.box2d.World;
 import com.badlogic.gdx.scenes.scene2d.ui.Label;
 import com.badlogic.gdx.scenes.scene2d.ui.Table;
 
+import net.infobosccoma.JocDeTrons.JocDeTrons;
 import net.infobosccoma.JocDeTrons.MapBodyManager;
 import net.infobosccoma.JocDeTrons.Personatge;
 import net.infobosccoma.JocDeTrons.TiledMapHelper;
@@ -111,6 +112,7 @@ public class Level1 extends AbstractScreen {
 		tiledMapHelper.getCamera().position.x = net.infobosccoma.JocDeTrons.JocDeTrons.PIXELS_PER_METRE
 				* personatge.getPositionBody().x;
 
+		tiledMapHelper.getCamera().position.y = JocDeTrons.PIXELS_PER_METRE * personatge.getPositionBody().y;
 		// Assegurar que la camera nomes mostra el mapa i res mes
 		if (tiledMapHelper.getCamera().position.x <  joc.getScreenWidth() / 2) {
 			tiledMapHelper.getCamera().position.x =  joc.getScreenWidth()/ 2;
