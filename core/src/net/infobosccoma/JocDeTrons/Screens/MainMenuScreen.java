@@ -36,7 +36,7 @@ public class MainMenuScreen extends AbstractScreen {
             @Override
             public void clicked(InputEvent event, float x, float y) {
 
-                ((Game)Gdx.app.getApplicationListener()).setScreen(new Level1(getGame()));
+                ((Game)Gdx.app.getApplicationListener()).setScreen(new Level2(getGame()));
             }
         });
         buttonExit.addListener(new ClickListener(){
