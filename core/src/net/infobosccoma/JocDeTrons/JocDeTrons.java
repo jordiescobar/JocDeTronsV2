@@ -23,10 +23,10 @@ public class JocDeTrons extends Game {
 	 * píxels. Es recomana utilitzar una constant per convertir píxels a metres
 	 * i a la inversa
 	 */
-	public static final float PIXELS_PER_METRE = 90.0f;
+	public static final float PIXELS_PER_METRE = 42.0f;
 	
-	public static final int WIDTH = 600;
-	public static final int HEIGHT = 320;
+	public static final int WIDTH = 400;
+	public static final int HEIGHT = 210;
 	//</editor-fold>
 
 	//<editor-fold desc="Atributs">
