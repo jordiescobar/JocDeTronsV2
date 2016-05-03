@@ -180,7 +180,7 @@ public class Level1 extends AbstractScreen {
 	private void carregarMapa() {
 		tiledMapHelper = new TiledMapHelper();
 		tiledMapHelper.setPackerDirectory("world/level1/packer");
-		tiledMapHelper.loadMap("world/level1/packer/level.tmx");
+		tiledMapHelper.loadMap("world/level1/packer/level-test.tmx");
 		tiledMapHelper.prepareCamera(joc.getScreenWidth(),
 				joc.getScreenHeight());
 	}

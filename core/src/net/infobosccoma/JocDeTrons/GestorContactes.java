@@ -38,10 +38,10 @@ public class GestorContactes implements ContactListener {
 			return;
 		}
 
-		if (fixtureA.getBody().getUserData().equals("personatge")
-				&& fixtureB.getBody().getUserData().equals("primerObjecte")
-				|| fixtureA.getBody().getUserData().equals("primerObjecte")
-				&& fixtureB.getBody().getUserData().equals("personatge")) {
+		if (fixtureA.getBody().getUserData().equals("Personatge")
+				&& fixtureB.getBody().getUserData().equals("terra1")
+				|| fixtureA.getBody().getUserData().equals("terra1")
+				&& fixtureB.getBody().getUserData().equals("Personatge")) {
 			/*
 			 * Afegir cos a destruir
 			 * 
