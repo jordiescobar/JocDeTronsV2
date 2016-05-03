@@ -205,7 +205,7 @@ public class Level1 extends AbstractScreen {
 		MapBodyManager mapBodyManager = new MapBodyManager(world,
 				net.infobosccoma.JocDeTrons.JocDeTrons.PIXELS_PER_METRE,
 				Gdx.files.internal("world/level1/materials.json"), 1);
-		mapBodyManager.createPhysics(tiledMapHelper.getMap(), "Box2D");
+		mapBodyManager.createPhysics(tiledMapHelper.getMap(), "Colisions");
 	}
 	//</editor-fold>
 	
