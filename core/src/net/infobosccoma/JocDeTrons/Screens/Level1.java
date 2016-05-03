@@ -182,7 +182,7 @@ public class Level1 extends AbstractScreen {
 	private void carregarMapa() {
 		tiledMapHelper = new TiledMapHelper();
 		tiledMapHelper.setPackerDirectory("world/level1/packer");
-		tiledMapHelper.loadMap("world/level1/packer/level_1.tmx");
+		tiledMapHelper.loadMap("world/level2/packer/level_2.tmx");
 		tiledMapHelper.prepareCamera(joc.getScreenWidth(),
 				joc.getScreenHeight());
 	}
@@ -205,7 +205,7 @@ public class Level1 extends AbstractScreen {
 		MapBodyManager mapBodyManager = new MapBodyManager(world,
 				net.infobosccoma.JocDeTrons.JocDeTrons.PIXELS_PER_METRE,
 				Gdx.files.internal("world/level1/materials.json"), 1);
-		mapBodyManager.createPhysics(tiledMapHelper.getMap(), "Colisions");
+		mapBodyManager.createPhysics(tiledMapHelper.getMap(), "Box2D");
 	}
 	//</editor-fold>
 	
