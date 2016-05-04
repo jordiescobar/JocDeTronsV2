@@ -252,7 +252,7 @@ public class Level1 extends AbstractScreen {
 		    // s'ha indicat entre begin i end
 		batch.end();
 
-        score.setText(Long.toString(personatge.getPunts()));
+        score.setText(Long.toString(personatge.getVida()));
 
 
         calculRedimensionat();

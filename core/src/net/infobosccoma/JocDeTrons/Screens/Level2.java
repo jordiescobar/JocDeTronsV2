@@ -139,12 +139,24 @@ public class Level2 extends AbstractScreen {
      * tractar els events de l'entrada
      */
 	private void tractarEventsEntrada() {
+
+		if (Gdx.input.isKeyPressed(Input.Keys.DPAD_UP)) {
+			personatge.setFerSalt(true);
+		} else {
+			for (int i = 0; i < 2; i++) {
+				if (Gdx.input.isTouched(i)
+						&& Gdx.input.getY() < Gdx.graphics.getHeight() * 0.20f) {
+					personatge.setFerSalt(true);
+				}
+			}
+		}
+
 		if (Gdx.input.isKeyPressed(Input.Keys.DPAD_RIGHT)) {
 			personatge.setMoureDreta(true);
 		} else {
 			for (int i = 0; i < 2; i++) {
 				if (Gdx.input.isTouched(i)
-						&& Gdx.input.getX() > Gdx.graphics.getWidth() * 0.80f) {
+						&& Gdx.input.getX() > Gdx.graphics.getWidth() * 0.70f) {
 					personatge.setMoureDreta(true);
 				}
 			}
@@ -155,19 +167,8 @@ public class Level2 extends AbstractScreen {
 		} else {
 			for (int i = 0; i < 2; i++) {
 				if (Gdx.input.isTouched(i)
-						&& Gdx.input.getX() < Gdx.graphics.getWidth() * 0.20f) {
+						&& Gdx.input.getX() < Gdx.graphics.getWidth() * 0.30f) {
 					personatge.setMoureEsquerra(true);
-				}
-			}
-		}
-
-		if (Gdx.input.isKeyPressed(Input.Keys.DPAD_UP)) {
-			personatge.setFerSalt(true);
-		} else {
-			for (int i = 0; i < 2; i++) {
-				if (Gdx.input.isTouched(i)
-						&& Gdx.input.getY() < Gdx.graphics.getHeight() * 0.20f) {
-					personatge.setFerSalt(true);
 				}
 			}
 		}
@@ -252,7 +253,7 @@ public class Level2 extends AbstractScreen {
 		    // s'ha indicat entre begin i end
 		batch.end();
 
-        score.setText(Long.toString(personatge.getPunts()));
+        score.setText(Long.toString(personatge.getVida()));
 
 
         calculRedimensionat();

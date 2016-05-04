@@ -42,7 +42,7 @@ public class Personatge {
     private Texture animatedTexture;
     private long idSoSalt;
 
-    private long punts;
+    private long vides;
     //</editor-fold>
 
     //<editor-fold desc="Constructors">
@@ -52,7 +52,7 @@ public class Personatge {
         carregarTextures();
         carregarSons();
         crearProtagonista(positionX, positionY);
-        punts = 0;
+        vides = 5;
     }
     //</editor-fold>
 
@@ -168,7 +168,6 @@ public class Personatge {
             cos.applyLinearImpulse(new Vector2(0.0f, 3.0f),
                     cos.getPosition(), true);
             idSoSalt = soSalt.play();
-            punts++;
         }
     }
 
@@ -242,12 +241,12 @@ public class Personatge {
         this.stoppedTexture = textura;
     }
 
-    public long getPunts() {
-        return punts;
+    public long getVida() {
+        return vides;
     }
 
-    public void setPunts(long punts) {
-        this.punts = punts;
+    public void setVida(long vida) {
+        this.vides = vida;
     }
 
     //</editor-fold>
