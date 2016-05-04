@@ -46,12 +46,12 @@ public class Personatge {
     //</editor-fold>
 
     //<editor-fold desc="Constructors">
-    public Personatge(World world) {
+    public Personatge(World world, float positionX, float positionY) {
         moureEsquerra = moureDreta = ferSalt = false;
         this.world = world;
         carregarTextures();
         carregarSons();
-        crearProtagonista();
+        crearProtagonista(positionX, positionY);
         punts = 0;
     }
     //</editor-fold>
@@ -72,14 +72,14 @@ public class Personatge {
         soSalt = Gdx.audio.newSound(Gdx.files.internal("sons/salt.mp3"));
     }
 
-    private void crearProtagonista() {
+    private void crearProtagonista(float positionX, float positionY) {
         spritePersonatge = new Sprite(animatedTexture);
         spriteAnimat = new AnimatedSprite(spritePersonatge, FRAME_COLS, FRAME_ROWS, stoppedTexture);
 
         // Definir el tipus de cos i la seva posició
         BodyDef defCos = new BodyDef();
         defCos.type = BodyDef.BodyType.DynamicBody;
-        defCos.position.set(1.0f, 3.0f);
+        defCos.position.set(positionX, positionY);
 
         cos = world.createBody(defCos);
         cos.setUserData("Personatge");

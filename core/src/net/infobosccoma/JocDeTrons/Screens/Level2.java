@@ -93,9 +93,9 @@ public class Level2 extends AbstractScreen {
         // --- si es volen destruir objectes, descomentar ---
 		//bodyDestroyList= new ArrayList<Body>();
 		//world.setContactListener(new GestorContactes(bodyDestroyList));
-		world.setContactListener(new net.infobosccoma.JocDeTrons.GestorContactes());
+		world.setContactListener(new net.infobosccoma.JocDeTrons.GestorContactes(joc));
 		// crear el personatge
-        personatge = new Personatge(world);
+        personatge = new Personatge(world, 5.0f, 5.0f);
         // objecte que permet debugar les col·lisions
 		debugRenderer = new Box2DDebugRenderer();
 

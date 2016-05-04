@@ -72,7 +72,7 @@ public class Level1 extends AbstractScreen {
 	//</editor-fold>
 
 	//<editor-fold desc="Constructors">
-	public Level1(net.infobosccoma.JocDeTrons.JocDeTrons joc) {
+	public Level1(net.infobosccoma.JocDeTrons.JocDeTrons joc, float positionX, float positionY) {
 		super(joc);
 
 
@@ -93,9 +93,9 @@ public class Level1 extends AbstractScreen {
         // --- si es volen destruir objectes, descomentar ---
 		//bodyDestroyList= new ArrayList<Body>();
 		//world.setContactListener(new GestorContactes(bodyDestroyList));
-		world.setContactListener(new net.infobosccoma.JocDeTrons.GestorContactes());
+		world.setContactListener(new net.infobosccoma.JocDeTrons.GestorContactes(joc));
 		// crear el personatge
-        personatge = new Personatge(world);
+        personatge = new Personatge(world, positionX, positionY);
         // objecte que permet debugar les col·lisions
 		debugRenderer = new Box2DDebugRenderer();
 
