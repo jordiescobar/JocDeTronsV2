@@ -93,15 +93,15 @@ public class GestorContactes implements ContactListener {
 				}
 			});
 
-		}
 
+	}
 		if (fixtureA.getBody().getUserData().equals("Personatge") && fixtureB.getBody().getUserData().equals("punxes2") || fixtureA.getBody().getUserData().equals("punxes2") && fixtureB.getBody().getUserData().equals("Personatge")) {
 
 			Gdx.app.postRunnable(new Runnable() {
 				@Override
 				public void run() {
 
-					joc.setScreen(new Level1(joc, 42.0f, 4.0f));
+					joc.setScreen(new Level1(joc, 45.0f, 4.0f));
 				}
 			});
 
@@ -113,7 +113,7 @@ public class GestorContactes implements ContactListener {
 				@Override
 				public void run() {
 
-					joc.setScreen(new Level1(joc, 42.0f, 4.0f));
+					joc.setScreen(new Level1(joc, 45.0f, 8.0f));
 				}
 			});
 
@@ -125,7 +125,7 @@ public class GestorContactes implements ContactListener {
 				@Override
 				public void run() {
 
-					joc.setScreen(new Level1(joc, 74.0f, 4.0f));
+					joc.setScreen(new Level1(joc, 82.0f, 4.0f));
 				}
 			});
 

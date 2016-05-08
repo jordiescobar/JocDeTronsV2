@@ -9,7 +9,6 @@ import com.badlogic.gdx.scenes.scene2d.ui.Label;
 import com.badlogic.gdx.scenes.scene2d.ui.Skin;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.scenes.scene2d.ui.TextButton;
-
 import net.infobosccoma.JocDeTrons.Screens.SplashScreen;
 
 /**
@@ -23,7 +22,7 @@ public class JocDeTrons extends Game {
 	 * píxels. Es recomana utilitzar una constant per convertir píxels a metres
 	 * i a la inversa
 	 */
-	public static final float PIXELS_PER_METRE = 42.0f;
+	public static final float PIXELS_PER_METRE = 38.5f;
 	
 	public static final int WIDTH = 400;
 	public static final int HEIGHT = 210;
