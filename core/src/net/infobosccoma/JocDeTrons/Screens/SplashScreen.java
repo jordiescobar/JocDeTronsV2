@@ -79,7 +79,7 @@ public class SplashScreen extends AbstractScreen {
     }
 
     /**
-     * en aixecar el botó del mouse després de fer clic o bé en aixecar el dit després de fer
+     * en aixecar el botó del mousedesprés de fer clic o bé en aixecar el dit després de fer
      * touch
      *
      * @param screenX

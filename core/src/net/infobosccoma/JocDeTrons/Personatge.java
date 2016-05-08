@@ -46,13 +46,13 @@ public class Personatge {
     //</editor-fold>
 
     //<editor-fold desc="Constructors">
-    public Personatge(World world, float positionX, float positionY) {
+    public Personatge(World world, float positionX, float positionY, long vides) {
         moureEsquerra = moureDreta = ferSalt = false;
         this.world = world;
         carregarTextures();
         carregarSons();
         crearProtagonista(positionX, positionY);
-        vides = 5;
+        this.vides = vides;
     }
     //</editor-fold>
 

@@ -439,7 +439,7 @@
    </properties>
    <polyline points="0,0 48,0 48,-16 32,-16 32,-48 0,-48 0,0"/>
   </object>
-  <object id="123" name="tronoHierro" type="fixture" x="4624" y="80" visible="0">
+  <object id="123" name="tronoHierro2" type="fixture" x="4624" y="80" visible="0">
    <properties>
     <property name="body" value="environment"/>
     <property name="material" value="ground"/>

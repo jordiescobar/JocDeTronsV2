@@ -72,7 +72,7 @@ public class Level2 extends AbstractScreen {
 	//</editor-fold>
 
 	//<editor-fold desc="Constructors">
-	public Level2(JocDeTrons joc) {
+	public Level2(JocDeTrons joc, long vides) {
 		super(joc);
 
 
@@ -93,9 +93,9 @@ public class Level2 extends AbstractScreen {
         // --- si es volen destruir objectes, descomentar ---
 		//bodyDestroyList= new ArrayList<Body>();
 		//world.setContactListener(new GestorContactes(bodyDestroyList));
-		world.setContactListener(new net.infobosccoma.JocDeTrons.GestorContactes(joc));
+		world.setContactListener(new net.infobosccoma.JocDeTrons.GestorContactes(joc, vides));
 		// crear el personatge
-        personatge = new Personatge(world, 5.0f, 5.0f);
+        personatge = new Personatge(world, 5.0f, 5.0f, vides);
         // objecte que permet debugar les col·lisions
 		debugRenderer = new Box2DDebugRenderer();
 
