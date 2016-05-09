@@ -7,18 +7,18 @@ import com.badlogic.gdx.physics.box2d.ContactImpulse;
 import com.badlogic.gdx.physics.box2d.ContactListener;
 import com.badlogic.gdx.physics.box2d.Fixture;
 import com.badlogic.gdx.physics.box2d.Manifold;
-
 import net.infobosccoma.JocDeTrons.Screens.Level1;
 import net.infobosccoma.JocDeTrons.Screens.Level2;
 import net.infobosccoma.JocDeTrons.Screens.MainMenuScreen;
-
 import java.util.ArrayList;
+
 /**
  * Classe que implementa la interface de gestió de contactes
  * 
  * @author Marc
  *
  */
+
 public class GestorContactes implements ContactListener {
 	//<editor-fold desc="Atributs">
 	// de moment, no utilitzat
