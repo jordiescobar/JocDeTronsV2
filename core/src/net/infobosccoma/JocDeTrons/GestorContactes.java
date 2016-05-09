@@ -1,6 +1,5 @@
 package net.infobosccoma.JocDeTrons;
 
-import com.badlogic.gdx.Game;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.physics.box2d.Body;
 import com.badlogic.gdx.physics.box2d.Contact;
@@ -58,7 +57,16 @@ public class GestorContactes implements ContactListener {
 					@Override
 					public void run() {
 
-						joc.setScreen(new Level1(joc, 9.0f, 4.0f, vides));
+                        if(vides == 0) {
+
+                            joc.setScreen(new MainMenuScreen(joc));
+
+                        }
+                        else {
+
+                            joc.setScreen(new Level1(joc, 9.0f, 4.0f, vides));
+
+                        }
 					}
 				});
 
@@ -71,7 +79,16 @@ public class GestorContactes implements ContactListener {
 				@Override
 				public void run() {
 
-					joc.setScreen(new Level1(joc, 9.0f, 4.0f, vides));
+                    if(vides == 0) {
+
+                        joc.setScreen(new MainMenuScreen(joc));
+
+                    }
+                    else {
+
+                        joc.setScreen(new Level1(joc, 9.0f, 4.0f, vides));
+
+                    }
 				}
 			});
 
@@ -84,7 +101,16 @@ public class GestorContactes implements ContactListener {
 				@Override
 				public void run() {
 
-					joc.setScreen(new Level1(joc, 9.0f, 4.0f, vides));
+                    if(vides == 0) {
+
+                        joc.setScreen(new MainMenuScreen(joc));
+
+                    }
+                    else {
+
+                        joc.setScreen(new Level1(joc, 9.0f, 4.0f, vides));
+
+                    }
 				}
 			});
 
@@ -97,7 +123,16 @@ public class GestorContactes implements ContactListener {
 				@Override
 				public void run() {
 
-					joc.setScreen(new Level1(joc, 9.0f, 4.0f, vides));
+                    if(vides == 0) {
+
+                        joc.setScreen(new MainMenuScreen(joc));
+
+                    }
+                    else {
+
+                        joc.setScreen(new Level1(joc, 9.0f, 4.0f, vides));
+
+                    }
 				}
 			});
 
@@ -110,7 +145,16 @@ public class GestorContactes implements ContactListener {
 				@Override
 				public void run() {
 
-					joc.setScreen(new Level1(joc, 45.0f, 4.0f, vides));
+                    if(vides == 0) {
+
+                        joc.setScreen(new MainMenuScreen(joc));
+
+                    }
+                    else {
+
+                        joc.setScreen(new Level1(joc, 45.0f, 4.0f, vides));
+
+                    }
 				}
 			});
 
@@ -123,7 +167,16 @@ public class GestorContactes implements ContactListener {
 				@Override
 				public void run() {
 
-					joc.setScreen(new Level1(joc, 45.0f, 8.0f, vides));
+                    if(vides == 0) {
+
+                        joc.setScreen(new MainMenuScreen(joc));
+
+                    }
+                    else {
+
+                        joc.setScreen(new Level1(joc, 45.0f, 4.0f, vides));
+
+                    }
 				}
 			});
 
@@ -136,11 +189,108 @@ public class GestorContactes implements ContactListener {
 				@Override
 				public void run() {
 
-					joc.setScreen(new Level1(joc, 82.0f, 4.0f, vides));
+                    if(vides == 0) {
+
+                        joc.setScreen(new MainMenuScreen(joc));
+
+                    }
+                    else {
+
+                        joc.setScreen(new Level1(joc, 82.0f, 4.0f, vides));
+
+                    }
 				}
 			});
 
 		}
+
+        if (fixtureA.getBody().getUserData().equals("Personatge") && fixtureB.getBody().getUserData().equals("guadanya1") || fixtureA.getBody().getUserData().equals("guadanya1") && fixtureB.getBody().getUserData().equals("Personatge")) {
+
+            vides--;
+            Gdx.app.postRunnable(new Runnable() {
+                @Override
+                public void run() {
+
+                    if(vides == 0) {
+
+                        joc.setScreen(new MainMenuScreen(joc));
+
+                    }
+                    else {
+
+                        joc.setScreen(new Level1(joc, 82.0f, 4.0f, vides));
+
+                    }
+                }
+            });
+
+        }
+
+        if (fixtureA.getBody().getUserData().equals("Personatge") && fixtureB.getBody().getUserData().equals("guadanya2") || fixtureA.getBody().getUserData().equals("guadanya2") && fixtureB.getBody().getUserData().equals("Personatge")) {
+
+            vides--;
+            Gdx.app.postRunnable(new Runnable() {
+                @Override
+                public void run() {
+
+                    if(vides == 0) {
+
+                        joc.setScreen(new MainMenuScreen(joc));
+
+                    }
+                    else {
+
+                        joc.setScreen(new Level1(joc, 82.0f, 4.0f, vides));
+
+                    }
+                }
+            });
+
+        }
+
+        if (fixtureA.getBody().getUserData().equals("Personatge") && fixtureB.getBody().getUserData().equals("guadanya3") || fixtureA.getBody().getUserData().equals("guadanya3") && fixtureB.getBody().getUserData().equals("Personatge")) {
+
+            vides--;
+            Gdx.app.postRunnable(new Runnable() {
+                @Override
+                public void run() {
+
+                    if(vides == 0) {
+
+                        joc.setScreen(new MainMenuScreen(joc));
+
+                    }
+                    else {
+
+                        joc.setScreen(new Level1(joc, 82.0f, 4.0f, vides));
+
+                    }
+                }
+            });
+
+        }
+
+        if (fixtureA.getBody().getUserData().equals("Personatge") && fixtureB.getBody().getUserData().equals("guadanya4") || fixtureA.getBody().getUserData().equals("guadanya4") && fixtureB.getBody().getUserData().equals("Personatge")) {
+
+            vides--;
+            Gdx.app.postRunnable(new Runnable() {
+                @Override
+                public void run() {
+
+                    if(vides == 0) {
+
+                        joc.setScreen(new MainMenuScreen(joc));
+
+                    }
+                    else {
+
+                        joc.setScreen(new Level1(joc, 82.0f, 4.0f, vides));
+
+                    }
+                }
+            });
+
+        }
 
         if (fixtureA.getBody().getUserData().equals("Personatge") && fixtureB.getBody().getUserData().equals("tronoHierro1") || fixtureA.getBody().getUserData().equals("tronoHierro1") && fixtureB.getBody().getUserData().equals("Personatge")) {
 
@@ -197,7 +347,16 @@ public class GestorContactes implements ContactListener {
 				@Override
 				public void run() {
 
-					joc.setScreen(new Level2(joc, vides));
+                    if(vides == 0) {
+
+                        joc.setScreen(new MainMenuScreen(joc));
+
+                    }
+                    else {
+
+                        joc.setScreen(new Level2(joc, vides));
+
+                    }
 				}
 			});
 
@@ -210,7 +369,16 @@ public class GestorContactes implements ContactListener {
                 @Override
                 public void run() {
 
-                    joc.setScreen(new Level2(joc, vides));
+                    if(vides == 0) {
+
+                        joc.setScreen(new MainMenuScreen(joc));
+
+                    }
+                    else {
+
+                        joc.setScreen(new Level2(joc, vides));
+
+                    }
                 }
             });
 
@@ -223,7 +391,16 @@ public class GestorContactes implements ContactListener {
                 @Override
                 public void run() {
 
-                    joc.setScreen(new Level2(joc, vides));
+                    if(vides == 0) {
+
+                        joc.setScreen(new MainMenuScreen(joc));
+
+                    }
+                    else {
+
+                        joc.setScreen(new Level2(joc, vides));
+
+                    }
                 }
             });
 
@@ -236,7 +413,16 @@ public class GestorContactes implements ContactListener {
                 @Override
                 public void run() {
 
-                    joc.setScreen(new Level2(joc, vides));
+                    if(vides == 0) {
+
+                        joc.setScreen(new MainMenuScreen(joc));
+
+                    }
+                    else {
+
+                        joc.setScreen(new Level2(joc, vides));
+
+                    }
                 }
             });
 
@@ -249,7 +435,16 @@ public class GestorContactes implements ContactListener {
                 @Override
                 public void run() {
 
-                    joc.setScreen(new Level2(joc, vides));
+                    if(vides == 0) {
+
+                        joc.setScreen(new MainMenuScreen(joc));
+
+                    }
+                    else {
+
+                        joc.setScreen(new Level2(joc, vides));
+
+                    }
                 }
             });
 
@@ -262,7 +457,16 @@ public class GestorContactes implements ContactListener {
                 @Override
                 public void run() {
 
-                    joc.setScreen(new Level2(joc, vides));
+                    if(vides == 0) {
+
+                        joc.setScreen(new MainMenuScreen(joc));
+
+                    }
+                    else {
+
+                        joc.setScreen(new Level2(joc, vides));
+
+                    }
                 }
             });
 
@@ -275,7 +479,16 @@ public class GestorContactes implements ContactListener {
                 @Override
                 public void run() {
 
-                    joc.setScreen(new Level2(joc, vides));
+                    if(vides == 0) {
+
+                        joc.setScreen(new MainMenuScreen(joc));
+
+                    }
+                    else {
+
+                        joc.setScreen(new Level2(joc, vides));
+
+                    }
                 }
             });
 
